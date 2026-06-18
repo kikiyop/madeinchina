@@ -11,10 +11,10 @@ export default function Home() {
   return (
     <main className="relative flex flex-1 flex-col items-center px-5 pt-20 pb-24 sm:px-6 sm:pt-28">
       <div className="mic-rise flex w-full max-w-2xl flex-col items-center text-center">
-        <h1 className="text-[2rem] font-semibold leading-[1.08] tracking-[-0.025em] text-balance text-foreground sm:text-[3.25rem]">
+        <h1 className="-translate-y-[10mm] text-[2rem] font-semibold leading-[1.08] tracking-[-0.025em] text-balance text-foreground sm:text-[3.25rem]">
           MadeInChina.info
         </h1>
-        <div className="mt-6 flex flex-col gap-1.5 text-sm font-medium tracking-wide text-faint">
+        <div className="mt-6 flex flex-col gap-1.5 text-left text-base font-medium tracking-wide text-faint">
           {FEATURES.map((f) => (
             <p key={f.label}>
               <span className="text-foreground">{f.label}</span> {f.text}
