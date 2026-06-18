@@ -43,13 +43,13 @@ export default function Home() {
 
       {/* Feature spec grid — hairlines via gap-px over a border-colored backdrop */}
       <section
-        className="rise mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2"
+        className="rise mx-auto mt-14 grid w-full max-w-3xl grid-cols-1 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2"
         style={{ animationDelay: "0.28s" }}
       >
         {FEATURES.map((f) => (
           <div
             key={f.n}
-            className="group relative bg-surface p-6 transition-colors hover:bg-surface-2 sm:p-7"
+            className="group relative bg-surface px-6 py-[calc(1.5rem-2mm)] transition-colors hover:bg-surface-2 sm:px-7 sm:py-[calc(1.75rem-2mm)]"
           >
             <div className="flex items-baseline gap-3">
               <span className="font-mono text-xs text-accent">{f.n}</span>
