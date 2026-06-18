@@ -5,7 +5,44 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* ── MadeInChina design tokens ──────────────────────────────────────────────
+   Reconstructed palette (the site's compiled CSS wasn't available). Warm-neutral
+   "premium / refined" direction with a single confident accent. Tweak freely. */
+@theme {
+  --color-background: #faf9f7; /* warm off-white page */
+  --color-foreground: #1c1917; /* near-black, warm */
+  --color-muted: #57534e; /* body copy */
+  --color-faint: #a8a29e; /* secondary / captions */
+  --color-surface: #ffffff; /* cards, inputs */
+  --color-surface-2: #f5f4f2; /* hover fills */
+  --color-border: #e7e5e4; /* default hairlines */
+  --color-border-strong: #d6d3d1; /* focus / emphasis */
+  --color-accent: #d13b27; /* CTA — confident vermilion */
+  --color-accent-hover: #b8311f;
+  --color-accent-foreground: #ffffff;
+
+  --shadow-soft: 0 1px 2px rgba(28, 25, 23, 0.04), 0 1px 3px rgba(28, 25, 23, 0.07);
+  --shadow-soft-lg: 0 12px 32px -12px rgba(28, 25, 23, 0.14), 0 4px 12px -6px rgba(28, 25, 23, 0.08);
+}
+
 body {
-  background: #0d0d0d;
-  color: #fff;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Hero entrance — fade + rise, eased like the original */
+@keyframes mic-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mic-rise {
+  animation: mic-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
