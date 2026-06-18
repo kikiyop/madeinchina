@@ -9,7 +9,7 @@ const FEATURES: { n: string; label: string; text: string }[] = [
 
 export default function Home() {
   return (
-    <main className="relative z-10 mx-auto flex w-full max-w-5xl flex-1 flex-col px-5 pt-8 pb-24 sm:px-8">
+    <main className="relative z-10 mx-auto flex w-full max-w-5xl flex-1 flex-col px-5 pt-8 pb-[58px] sm:px-8">
       {/* Technical header strip */}
       <div className="rise flex items-center justify-between border-b border-border pb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-faint">
         <span>// madeinchina.info</span>
@@ -20,7 +20,7 @@ export default function Home() {
       </div>
 
       {/* Hero */}
-      <section className="flex flex-col items-center pt-16 text-center sm:pt-24">
+      <section className="flex flex-col items-center pt-8 text-center sm:pt-5">
         <span
           className="rise font-mono text-xs uppercase tracking-[0.35em] text-accent-bright"
           style={{ animationDelay: "0.05s" }}
@@ -28,13 +28,13 @@ export default function Home() {
           中国制造 — Verified Intelligence
         </span>
         <h1
-          className="rise mt-5 text-[2.75rem] font-extrabold leading-[0.92] tracking-[-0.03em] text-foreground sm:text-[5.5rem]"
+          className="rise mt-3 text-[2rem] font-extrabold leading-[0.95] tracking-[-0.03em] text-foreground sm:text-[2.6rem]"
           style={{ animationDelay: "0.12s" }}
         >
           MadeInChina<span className="text-accent">.</span>info
         </h1>
         <p
-          className="rise mt-4 font-mono text-xs uppercase tracking-[0.32em] text-muted sm:text-sm"
+          className="rise mt-3 font-mono text-xs uppercase tracking-[0.32em] text-muted sm:text-sm"
           style={{ animationDelay: "0.2s" }}
         >
           Industrial Supplier Tools
