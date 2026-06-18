@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
 });
 
 const DESCRIPTION =
@@ -52,28 +55,25 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${archivo.variable} ${plexMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         {children}
 
-        <footer className="mt-auto border-t border-border">
-          <div className="mx-auto flex max-w-3xl flex-col items-center gap-3 px-6 py-8 text-xs text-faint sm:flex-row sm:justify-between">
-            <span>
-              © MadeInChina.{" "}
-              <span className="text-faint/70">AI estimates, not verified quotes.</span>
-            </span>
-            <nav className="flex gap-5">
-              <a className="transition-colors hover:text-foreground" href="/">
+        <footer className="relative z-10 mt-auto border-t border-border">
+          <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-3 px-6 py-6 font-mono text-[11px] uppercase tracking-[0.18em] text-faint sm:flex-row sm:justify-between">
+            <span>© MadeInChina.info — AI estimates, not verified quotes</span>
+            <nav className="flex gap-6">
+              <a className="transition-colors hover:text-accent-bright" href="/">
                 Home
               </a>
-              <a className="transition-colors hover:text-foreground" href="/about">
+              <a className="transition-colors hover:text-accent-bright" href="/about">
                 About
               </a>
-              <a className="transition-colors hover:text-foreground" href="/contact">
+              <a className="transition-colors hover:text-accent-bright" href="/contact">
                 Contact
               </a>
-              <a className="transition-colors hover:text-foreground" href="/privacy">
+              <a className="transition-colors hover:text-accent-bright" href="/privacy">
                 Privacy
               </a>
             </nav>

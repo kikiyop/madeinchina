@@ -16,8 +16,19 @@ export default function AuditForm() {
   }
 
   return (
-    <form className="mx-auto w-full max-w-xl" onSubmit={handleSubmit}>
-      <div className="rounded-[1.4rem] border border-border bg-surface p-2.5 shadow-soft-lg transition-all focus-within:border-border-strong">
+    <form onSubmit={handleSubmit} className="relative mx-auto w-full max-w-2xl">
+      {/* Corner brackets — technical framing */}
+      <span className="pointer-events-none absolute -left-px -top-px h-4 w-4 border-l-2 border-t-2 border-accent/70" />
+      <span className="pointer-events-none absolute -right-px -top-px h-4 w-4 border-r-2 border-t-2 border-accent/70" />
+      <span className="pointer-events-none absolute -bottom-px -left-px h-4 w-4 border-b-2 border-l-2 border-accent/70" />
+      <span className="pointer-events-none absolute -bottom-px -right-px h-4 w-4 border-b-2 border-r-2 border-accent/70" />
+
+      <div className="rounded-lg border border-border bg-surface p-3 transition-all focus-within:border-accent/50 focus-within:shadow-[0_0_36px_-8px_rgba(22,163,74,0.45)]">
+        <div className="flex items-center justify-between border-b border-border px-1 pb-2 font-mono text-[10px] uppercase tracking-[0.22em] text-faint">
+          <span>Audit Console</span>
+          <span className="text-accent-bright">● Ready</span>
+        </div>
+
         <textarea
           value={description}
           onChange={(e) => setDescription(e.target.value)}
@@ -25,9 +36,10 @@ export default function AuditForm() {
           rows={3}
           maxLength={2000}
           aria-label="Product description"
-          className="w-full resize-none bg-transparent px-3.5 py-3 text-base leading-relaxed text-foreground outline-none placeholder:text-faint"
+          className="mt-2 w-full resize-none bg-transparent px-2 py-2 text-base leading-relaxed text-foreground outline-none placeholder:text-faint"
         />
-        <div className="flex items-center justify-between gap-2 px-1.5 pb-0.5">
+
+        <div className="flex items-center justify-between gap-2 px-1 pt-1">
           <input
             ref={fileInputRef}
             type="file"
@@ -38,15 +50,15 @@ export default function AuditForm() {
           <button
             type="button"
             onClick={() => fileInputRef.current?.click()}
-            className="inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-muted transition-colors hover:bg-surface-2 hover:text-foreground"
+            className="inline-flex items-center gap-2 rounded-md px-2.5 py-2 font-mono text-[11px] uppercase tracking-[0.12em] text-faint transition-colors hover:bg-surface-2 hover:text-foreground"
           >
             <svg
-              width="16"
-              height="16"
+              width="14"
+              height="14"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="1.6"
+              strokeWidth="1.8"
               strokeLinecap="round"
               strokeLinejoin="round"
               aria-hidden="true"
@@ -57,12 +69,28 @@ export default function AuditForm() {
             </svg>
             {photoName ? "Photo attached" : "Attach photo"}
           </button>
+
           <button
             type="submit"
             disabled={!canSubmit}
-            className="inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-2.5 text-base font-semibold text-accent-foreground shadow-soft transition-all hover:bg-accent-hover active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40"
+            className="group inline-flex items-center gap-2 rounded-md bg-accent px-6 py-2.5 font-mono text-sm font-bold uppercase tracking-[0.14em] text-accent-foreground shadow-[0_0_24px_-6px_rgba(22,163,74,0.7)] transition-all hover:bg-accent-hover active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none"
           >
             Run audit
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+              className="transition-transform group-hover:translate-x-0.5"
+            >
+              <path d="M5 12h14" />
+              <path d="m13 6 6 6-6 6" />
+            </svg>
           </button>
         </div>
       </div>
