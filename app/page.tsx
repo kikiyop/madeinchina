@@ -10,19 +10,10 @@ const FEATURES: { n: string; label: string; text: string }[] = [
 export default function Home() {
   return (
     <main className="relative z-10 mx-auto flex w-full max-w-5xl flex-1 flex-col px-5 pt-8 pb-[58px] sm:px-8">
-      {/* Technical header strip */}
-      <div className="rise flex items-center justify-between border-b border-border pb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-faint">
-        <span>// madeinchina.info</span>
-        <span className="flex items-center gap-2">
-          <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-accent-bright" />
-          System Operational
-        </span>
-      </div>
-
       {/* Hero */}
-      <section className="flex flex-col items-center pt-8 text-center sm:pt-5">
+      <section className="flex flex-col items-center pt-14 text-center sm:pt-10">
         <span
-          className="rise font-mono text-xs uppercase tracking-[0.35em] text-accent-bright"
+          className="rise font-mono text-base uppercase tracking-[0.2em] text-balance text-accent-bright sm:text-xl"
           style={{ animationDelay: "0.05s" }}
         >
           AI-Powered China Manufacturing Intelligence
@@ -38,12 +29,6 @@ export default function Home() {
           style={{ animationDelay: "0.16s" }}
         >
           中国制造
-        </p>
-        <p
-          className="rise mt-2 font-mono text-xs uppercase tracking-[0.32em] text-muted sm:text-sm"
-          style={{ animationDelay: "0.22s" }}
-        >
-          Industrial Supplier Tools
         </p>
       </section>
 
