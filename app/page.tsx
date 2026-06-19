@@ -3,7 +3,7 @@ import AuditForm from "@/components/AuditForm";
 const FEATURES: { n: string; label: string; text: string }[] = [
   { n: "01", label: "Industrial Cost Audit", text: "Estimate factory-gate costs in seconds." },
   { n: "02", label: "Sourcing Intelligence", text: "Discover China's leading manufacturing hubs." },
-  { n: "03", label: "Risk Prevention", text: "AI recommendation of product-specific risk alerts." },
+  { n: "03", label: "Risk Prevention", text: "Detect product-specific sourcing risks." },
   { n: "04", label: "Top-Rated Suppliers", text: "Get contact details for the best manufacturers." },
 ];
 
@@ -34,7 +34,7 @@ export default function Home() {
 
       {/* Feature spec grid — hairlines via gap-px over a border-colored backdrop */}
       <section
-        className="rise mx-auto mt-14 grid w-full max-w-3xl grid-cols-1 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2"
+        className="rise mx-auto mt-14 grid w-full max-w-3xl grid-cols-1 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 sm:auto-rows-fr"
         style={{ animationDelay: "0.28s" }}
       >
         {FEATURES.map((f) => (

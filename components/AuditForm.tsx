@@ -16,7 +16,7 @@ export default function AuditForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="relative mx-auto w-full max-w-2xl">
+    <form onSubmit={handleSubmit} className="relative mx-auto w-full max-w-md">
       {/* Corner brackets — technical framing */}
       <span className="pointer-events-none absolute -left-px -top-px h-4 w-4 border-l-2 border-t-2 border-accent/70" />
       <span className="pointer-events-none absolute -right-px -top-px h-4 w-4 border-r-2 border-t-2 border-accent/70" />
