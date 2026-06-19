@@ -25,7 +25,7 @@ export default function Home() {
           className="rise font-mono text-xs uppercase tracking-[0.35em] text-accent-bright"
           style={{ animationDelay: "0.05s" }}
         >
-          中国制造 — AI-Powered China Manufacturing Intelligence
+          AI-Powered China Manufacturing Intelligence
         </span>
         <h1
           className="rise mt-3 text-[2rem] font-extrabold leading-[0.95] tracking-[-0.03em] text-foreground sm:text-[2.6rem]"
@@ -34,8 +34,14 @@ export default function Home() {
           MadeInChina<span className="text-accent">.</span>info
         </h1>
         <p
-          className="rise mt-3 font-mono text-xs uppercase tracking-[0.32em] text-muted sm:text-sm"
-          style={{ animationDelay: "0.2s" }}
+          className="rise mt-2 pl-[0.4em] text-lg tracking-[0.4em] text-accent-bright"
+          style={{ animationDelay: "0.16s" }}
+        >
+          中国制造
+        </p>
+        <p
+          className="rise mt-2 font-mono text-xs uppercase tracking-[0.32em] text-muted sm:text-sm"
+          style={{ animationDelay: "0.22s" }}
         >
           Industrial Supplier Tools
         </p>
