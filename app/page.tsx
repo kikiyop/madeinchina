@@ -48,7 +48,7 @@ export default function Home() {
                 {f.label}
               </h3>
             </div>
-            <p className="mt-2 text-[0.95rem] leading-relaxed text-faint">{f.text}</p>
+            <p className="mt-2 text-[0.95rem] leading-relaxed text-muted">{f.text}</p>
             <span className="absolute right-4 top-4 h-2 w-2 border-r border-t border-border-strong transition-colors group-hover:border-accent-bright" />
           </div>
         ))}
