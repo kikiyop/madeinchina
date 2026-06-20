@@ -24,7 +24,7 @@ export default function AuditForm() {
       <span className="pointer-events-none absolute -bottom-px -right-px h-4 w-4 border-b-2 border-r-2 border-accent/70" />
 
       <div className="rounded-lg border border-border bg-surface p-3 transition-all focus-within:border-accent/50 focus-within:shadow-[0_0_36px_-8px_rgba(22,163,74,0.45)]">
-        <div className="flex items-center justify-between border-b border-border px-1 pb-2 font-mono text-[10px] uppercase tracking-[0.22em] text-faint">
+        <div className="flex items-center justify-between border-b border-border px-1 pb-2 font-mono text-[10px] uppercase tracking-[0.22em] text-muted">
           <span>Audit Console</span>
           <span className="text-accent-bright">● Ready</span>
         </div>
@@ -36,7 +36,7 @@ export default function AuditForm() {
           rows={2}
           maxLength={2000}
           aria-label="Product description"
-          className="mt-2 w-full resize-none bg-transparent px-2 py-2 text-base leading-relaxed text-foreground outline-none placeholder:text-faint"
+          className="mt-2 w-full resize-none bg-transparent px-2 py-2 text-base leading-relaxed text-foreground outline-none placeholder:text-muted"
         />
 
         <div className="flex items-center justify-between gap-2 px-1 pt-1">
@@ -50,7 +50,7 @@ export default function AuditForm() {
           <button
             type="button"
             onClick={() => fileInputRef.current?.click()}
-            className="inline-flex items-center gap-2 rounded-md px-2.5 py-2 font-mono text-[11px] uppercase tracking-[0.12em] text-faint transition-colors hover:bg-surface-2 hover:text-foreground"
+            className="inline-flex items-center gap-2 rounded-md px-2.5 py-2 font-mono text-[11px] uppercase tracking-[0.12em] text-muted transition-colors hover:bg-surface-2 hover:text-foreground"
           >
             <svg
               width="14"

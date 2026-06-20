@@ -61,7 +61,7 @@ export default function RootLayout({
         {children}
 
         <footer className="relative z-10 mt-auto border-t border-border">
-          <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-3 px-6 py-6 font-mono text-[11px] uppercase tracking-[0.18em] text-faint sm:flex-row sm:justify-between">
+          <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-3 px-6 py-6 font-mono text-[11px] uppercase tracking-[0.18em] text-muted sm:flex-row sm:justify-between">
             <span>© MadeInChina.info — AI estimates, not verified quotes</span>
             <nav className="flex gap-6">
               <a className="transition-colors hover:text-accent-bright" href="/">
