@@ -16,7 +16,7 @@ export default function AuditForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="relative mx-auto w-full max-w-md">
+    <form onSubmit={handleSubmit} className="relative mx-auto w-full max-w-2xl">
       {/* Corner brackets — technical framing */}
       <span className="pointer-events-none absolute -left-px -top-px h-4 w-4 border-l-2 border-t-2 border-accent/70" />
       <span className="pointer-events-none absolute -right-px -top-px h-4 w-4 border-r-2 border-t-2 border-accent/70" />
@@ -33,7 +33,7 @@ export default function AuditForm() {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           placeholder="Type a product with specs (e.g., '100% Organic Cotton T-shirt') or drop a photo here..."
-          rows={3}
+          rows={2}
           maxLength={2000}
           aria-label="Product description"
           className="mt-2 w-full resize-none bg-transparent px-2 py-2 text-base leading-relaxed text-foreground outline-none placeholder:text-faint"
