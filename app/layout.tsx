@@ -70,7 +70,10 @@ export default function RootLayout({
               <a className="transition-colors hover:text-accent-bright" href="/about">
                 About
               </a>
-              <a className="transition-colors hover:text-accent-bright" href="/contact">
+              <a
+                className="transition-colors hover:text-accent-bright"
+                href="mailto:contact@internet.fr"
+              >
                 Contact
               </a>
               <a className="transition-colors hover:text-accent-bright" href="/privacy">
